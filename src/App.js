@@ -4,23 +4,33 @@ import './../src/assets/css/App.css';
 import ComponenteTitulo from './components/Componente-titulo'
 import ComponenteParrafo from './components/Componente-parrafo'
 import ComponenteBoton from './components/Componente-boton'
-// import ComponenteInput from './components/Componente-input'
+import ComponenteSubmit from './components/Componente-submit'
+import ComponenteInput from './components/Componente-input'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-       <ComponenteTitulo />
-       <ComponenteParrafo />
-       <ComponenteBoton />
-       <input type="text" className="nombre"></input>
-       <input type="text" className="apellido"></input>
-       <input type="email" className="email"></input>
-       <input type="password" className="password"></input>
-       
+    <div className="flex">
+    
+      
+      <div className="contenedor-1">
+      <ComponenteTitulo />
+      <ComponenteParrafo />
+      </div>
 
-      </header>
+      <div className="contenedor-2">       
+        <ComponenteBoton />
+          <div className="contenedor-input">
+            <ComponenteInput type="text" placeholder="Name"/>
+            <ComponenteInput type="text" placeholder="Last Name"/>
+            <ComponenteInput type="email" placeholder="Email"/>
+            <ComponenteInput type="password" placeholder="Password"/>
+            <ComponenteSubmit />
+          </div>
+      </div>
+             
+          
+
+     
     </div>
   );
 }

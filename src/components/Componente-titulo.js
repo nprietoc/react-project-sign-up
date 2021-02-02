@@ -5,7 +5,7 @@ const ComponenteTitulo = () => {
     let titulo = "Learn to code by watching others";
     
     return(
-        <h1>{titulo}</h1>
+        <h1 className="titulo">{titulo}</h1>
     );
 }
 
