@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const ComponenteSubmit = () => {
-    let submit = "Claim your free trial";
+    let submit = "CLAIM YOUR FREE TRIAL";
     let footer = "By clicking the button, you are agreeing to our";
     let link = " Terms and Services";    
     

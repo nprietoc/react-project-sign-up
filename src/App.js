@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './../src/assets/css/App.css';
 
 import ComponenteTitulo from './components/Componente-titulo'
@@ -8,10 +8,15 @@ import ComponenteSubmit from './components/Componente-submit'
 import ComponenteInput from './components/Componente-input'
 
 function App() {
+  const [form, setForm] = useState({name: "", lastName: "", email: "", password: ""})
+
+  const handleChange= (e) => {
+    setForm({...form, [e.target.name]: e.target.value})
+    console.log(form)
+  }
   return (
     <div className="flex">
-    
-      
+          
       <div className="contenedor-1">
       <ComponenteTitulo />
       <ComponenteParrafo />
@@ -20,10 +25,10 @@ function App() {
       <div className="contenedor-2">       
         <ComponenteBoton />
           <div className="contenedor-input">
-            <ComponenteInput type="text" placeholder="Name"/>
-            <ComponenteInput type="text" placeholder="Last Name"/>
-            <ComponenteInput type="email" placeholder="Email"/>
-            <ComponenteInput type="password" placeholder="Password"/>
+            <ComponenteInput className="input" type="text" placeholder="Name" name="name" onChange={(e)=> handleChange(e)}/>
+            <ComponenteInput className="input" type="text" placeholder="Last Name" name="lastName" onChange={(e)=> handleChange(e)}/>
+            <ComponenteInput className="input" type="email" placeholder="Email" name="email" onChange={(e)=> handleChange(e)}/>
+            <ComponenteInput className="input" type="password" placeholder="Password" name="password" onChange={(e)=> handleChange(e)}/>
             <ComponenteSubmit />
           </div>
       </div>

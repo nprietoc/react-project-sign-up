@@ -2,10 +2,15 @@ import React from 'react';
 
 
 const ComponenteBoton = () => {
-    let boton = "Try it free 7 days then $20/mo. thereafter";
+    let negrilla = "Try it free 7 days";
+    let boton = " then $20/mo. thereafter";
     
     return(
-        <button className="boton-try">{boton}</button>
+        <div>
+        <p className="negrilla">{negrilla}
+        <span className="boton-try">{boton}</span>
+        </p>
+        </div>
     );
 }
 
