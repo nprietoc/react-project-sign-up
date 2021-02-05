@@ -8,7 +8,7 @@ const ComponenteSubmit = () => {
     
     return(
         <div>
-        <button className="boton-claim">{submit}</button>
+        <button type="submit" className="boton-claim">{submit}</button>
         <p className="footer">{footer}
         <span className="link">{link}</span> 
         </p>

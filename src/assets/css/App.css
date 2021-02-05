@@ -94,3 +94,7 @@
   color: hsl(0, 100%, 74%);
   font-weight: bold;
 }
+
+.text-danger{
+  color: red;
+}
